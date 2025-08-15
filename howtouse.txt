@@ -3,4 +3,6 @@ how to use yt-dl
 Download Pyton
 download ffmpeg full
 add environemnt variables for ffmepeg to path
-python ytmp3.py "https://www.youtube.com/watch?v=VIDEO_ID" - run this in cmd.
+pip install yt-dlp - in cmd
+navigate to directory with script, then run below command in cmd
+python yt-dl.py "https://www.youtube.com/watch?v=VIDEO_ID" - run this in cmd.

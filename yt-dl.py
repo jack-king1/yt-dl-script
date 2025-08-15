@@ -1,5 +1,6 @@
 import sys
 import yt_dlp
+import os
 
 if len(sys.argv) < 2:
     print("Usage: python ytmp3.py <YouTube_URL>")
@@ -7,13 +8,16 @@ if len(sys.argv) < 2:
 
 url = sys.argv[1]
 
+# Get user's Downloads folder path
+downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
+
 ydl_opts = {
     'format': 'bestaudio/best',
-    'outtmpl': '%(title)s.%(ext)s',  # Saves file as video title
+    'outtmpl': os.path.join(downloads_path, '%(title)s.%(ext)s'),  # Save to Downloads
     'postprocessors': [{
         'key': 'FFmpegExtractAudio',
         'preferredcodec': 'mp3',
-        'preferredquality': '192',  # kbps
+        'preferredquality': '192',
     }],
 }
 
