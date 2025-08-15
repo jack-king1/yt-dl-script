@@ -1,0 +1,6 @@
+how to use yt-dl
+
+Download Pyton
+download ffmpeg full
+add environemnt variables for ffmepeg to path
+python ytmp3.py "https://www.youtube.com/watch?v=VIDEO_ID" - run this in cmd.
